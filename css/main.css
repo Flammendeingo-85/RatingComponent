@@ -24,6 +24,11 @@
 body {
   /* 4. Add accessible line-height */
   line-height: 1.5;
+  /* Base Font-Size */
+  font-size: 15px;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: var(--ff-overpass, sans-serif);
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
@@ -76,4 +81,43 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/***************/
+/* ROOT STYLES */
+/***************/
+:root {
+  /***************/
+  /* MAIN COLORS */
+  /***************/
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-grey-500: hsl(217, 12%, 63%);
+  --clr-grey-900: hsl(213, 19%, 18%);
+  --clr-grey-950: hsl(216, 12%, 8%);
+  --clr-orange-500: hsl(25, 97%, 53%);
+  /**************/
+  /* FONT-SPECS */
+  /**************/
+  --fs-base-15: 1rem;
+  --ff-overpass: "Overpass", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/***********************************/
+/* MOBILE LAYOUT - (max-width: 375px) */
+/***********************************/
+@media only screen and (max-width: 375px) {
+  body {
+    background-color: var(--clr-grey-950);
+    color: var(--clr-white);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
